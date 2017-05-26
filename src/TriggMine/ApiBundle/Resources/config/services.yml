@@ -1,0 +1,5 @@
+services:
+    event_listener.cart_listener:
+        class: TriggMine\ApiBundle\EventListener\CartListener
+        tags:
+           -  { name: kernel.event_listener, event: sylius.cart.update, method: onCartSave }
